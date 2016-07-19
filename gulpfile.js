@@ -5,3 +5,6 @@ gulp.task('sass', function(){
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(gulp.dest(''))
 });
+gulp.task('watch', function () {
+  gulp.watch('scss/style.scss', ['sass']);
+});
