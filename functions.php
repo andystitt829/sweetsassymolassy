@@ -67,6 +67,15 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 //* Add Image Sizes
 add_image_size( 'featured-image', 720, 400, TRUE );
 
+//* Unregister content/sidebar/sidebar layout setting
+genesis_unregister_layout( 'content-sidebar-sidebar' );
+ 
+//* Unregister sidebar/sidebar/content layout setting
+genesis_unregister_layout( 'sidebar-sidebar-content' );
+ 
+//* Unregister sidebar/content/sidebar layout setting
+genesis_unregister_layout( 'sidebar-content-sidebar' );
+
 //* Rename primary and secondary navigation menus
 add_theme_support( 'genesis-menus' , array( 'primary' => __( 'After Header Menu', 'sweet-sassy-molassy' ), 'secondary' => __( 'Footer Menu', 'sweet-sassy-molassy' ) ) );
 
@@ -90,7 +99,7 @@ function genesis_sample_secondary_menu_args( $args ) {
 
 //* Modify size of the Gravatar in the author box
 add_filter( 'genesis_author_box_gravatar_size', 'sweet_sassy_molassy_author_box_gravatar' );
-function genesis_sample_author_box_gravatar( $size ) {
+function sweet_sassy_molassy_author_box_gravatar( $size ) {
 
 	return 90;
 
@@ -98,7 +107,7 @@ function genesis_sample_author_box_gravatar( $size ) {
 
 //* Modify size of the Gravatar in the entry comments
 add_filter( 'genesis_comment_list_args', 'sweet_sassy_molassy_comments_gravatar' );
-function genesis_sample_comments_gravatar( $args ) {
+function sweet_sassy_molassy_comments_gravatar( $args ) {
 
 	$args['avatar_size'] = 60;
 
