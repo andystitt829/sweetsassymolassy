@@ -1019,7 +1019,7 @@ img.alignright,
   text-align: left; }
 
 .genesis-nav-menu a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   display: block;
   padding: 32px 20px; }
@@ -1029,7 +1029,6 @@ img.alignright,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus {
-  color: #c3251d;
   text-decoration: underline; }
 
 .genesis-nav-menu .sub-menu {
@@ -1098,7 +1097,7 @@ img.alignright,
 /* ## After Header Navigation
 --------------------------------------------- */
 .nav-primary {
-  background-color: #fff;
+  background-color: #000;
   border-top: 1px solid #eee; }
 
 /* ## Footer Navigation
