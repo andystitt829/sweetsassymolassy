@@ -22,18 +22,18 @@ define( 'CHILD_THEME_URL', 'https://github.com/andystitt829/sweetsassymolassy' )
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Enqueue Scripts and Styles
-add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
-function genesis_sample_enqueue_scripts_styles() {
+add_action( 'wp_enqueue_scripts', 'ssm_enqueue_scripts_styles' );
+function ssm_enqueue_scripts_styles() {
 
 	wp_enqueue_style( 'sweet-sassy-molassy-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
-
+	wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css' );
 	wp_enqueue_script( 'sweet-sassy-molassy-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
 	$output = array(
 		'mainMenu' => __( 'Menu', 'sweet-sassy-molassy' ),
 		'subMenu'  => __( 'Menu', 'sweet-sassy-molassy' ),
 	);
-	wp_localize_script( 'sweet-sassy-molassy-responsive-menu', 'sweetsassyMolassyL10n', $output );
+	wp_enqueue_script( 'bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), true);		wp_localize_script( 'sweet-sassy-molassy-responsive-menu', 'sweetsassyMolassyL10n', $output );
 
 }
 
@@ -84,8 +84,8 @@ remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_footer', 'genesis_do_subnav', 5 );
 
 //* Reduce the secondary navigation menu to one level depth
-add_filter( 'wp_nav_menu_args', 'genesis_sample_secondary_menu_args' );
-function genesis_sample_secondary_menu_args( $args ) {
+add_filter( 'wp_nav_menu_args', 'ssm_secondary_menu_args' );
+function ssm_secondary_menu_args( $args ) {
 
 	if ( 'secondary' != $args['theme_location'] ) {
 		return $args;
@@ -98,16 +98,16 @@ function genesis_sample_secondary_menu_args( $args ) {
 }
 
 //* Modify size of the Gravatar in the author box
-add_filter( 'genesis_author_box_gravatar_size', 'sweet_sassy_molassy_author_box_gravatar' );
-function sweet_sassy_molassy_author_box_gravatar( $size ) {
+add_filter( 'genesis_author_box_gravatar_size', 'ssm_author_box_gravatar' );
+function ssm_author_box_gravatar( $size ) {
 
 	return 90;
 
 }
 
 //* Modify size of the Gravatar in the entry comments
-add_filter( 'genesis_comment_list_args', 'sweet_sassy_molassy_comments_gravatar' );
-function sweet_sassy_molassy_comments_gravatar( $args ) {
+add_filter( 'genesis_comment_list_args', 'ssm_comments_gravatar' );
+function ssm_comments_gravatar( $args ) {
 
 	$args['avatar_size'] = 60;
 
