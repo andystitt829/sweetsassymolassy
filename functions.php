@@ -97,6 +97,9 @@ function ssm_secondary_menu_args( $args ) {
 
 }
 
+//* Remove the site description
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
 //* Modify size of the Gravatar in the author box
 add_filter( 'genesis_author_box_gravatar_size', 'ssm_author_box_gravatar' );
 function ssm_author_box_gravatar( $size ) {
