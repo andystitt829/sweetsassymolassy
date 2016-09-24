@@ -588,33 +588,13 @@ th:first-child {
 
 /* ## Column Widths and Positions
 --------------------------------------------- */
-/* ### Wrapping div for .content and .sidebar-primary */
-.content-sidebar-sidebar .content-sidebar-wrap,
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-  width: 1060px; }
-
-.content-sidebar-sidebar .content-sidebar-wrap {
-  float: left; }
-
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-  float: right; }
-
 /* ### Content */
 .content {
   float: right;
   width: 880px; }
 
-.content-sidebar .content,
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content {
+.content-sidebar .content {
   float: left; }
-
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content,
-.sidebar-sidebar-content .content {
-  width: 660px; }
 
 .full-width-content .content {
   width: 100%; }
@@ -624,17 +604,13 @@ th:first-child {
   float: right;
   width: 360px; }
 
-.sidebar-content .sidebar-primary,
-.sidebar-sidebar-content .sidebar-primary {
+.sidebar-content .sidebar-primary {
   float: left; }
 
 /* ### Secondary Sidebar */
 .sidebar-secondary {
   float: left;
   width: 180px; }
-
-.content-sidebar-sidebar .sidebar-secondary {
-  float: right; }
 
 /* ## Column Classes
 --------------------------------------------- */
@@ -1292,17 +1268,9 @@ p.entry-meta {
   .site-inner,
   .wrap {
     max-width: 1140px; }
-  .content-sidebar-sidebar .content-sidebar-wrap,
-  .sidebar-content-sidebar .content-sidebar-wrap,
-  .sidebar-sidebar-content .content-sidebar-wrap {
-    width: 920px; }
   .content,
   .site-header .widget-area {
     width: 800px; }
-  .sidebar-content-sidebar .content,
-  .sidebar-sidebar-content .content,
-  .content-sidebar-sidebar .content {
-    width: 580px; }
   .sidebar-primary {
     width: 300px; }
   .footer-widgets-1,
@@ -1316,17 +1284,9 @@ p.entry-meta {
   .site-inner,
   .wrap {
     max-width: 960px; }
-  .content-sidebar-sidebar .content-sidebar-wrap,
-  .sidebar-content-sidebar .content-sidebar-wrap,
-  .sidebar-sidebar-content .content-sidebar-wrap {
-    width: 740px; }
   .content,
   .site-header .widget-area {
     width: 620px; }
-  .sidebar-content-sidebar .content,
-  .sidebar-sidebar-content .content,
-  .content-sidebar-sidebar .content {
-    width: 400px; }
   .footer-widgets-1,
   .footer-widgets-2,
   .footer-widgets-3 {
@@ -1339,19 +1299,13 @@ p.entry-meta {
   .wrap {
     max-width: 800px; }
   .content,
-  .content-sidebar-sidebar .content,
-  .content-sidebar-sidebar .content-sidebar-wrap,
   .footer-widgets-1,
   .footer-widgets-2,
   .footer-widgets-3,
   .js .genesis-nav-menu .sub-menu a,
   .js .genesis-nav-menu .sub-menu,
-  .sidebar-content-sidebar .content,
-  .sidebar-content-sidebar .content-sidebar-wrap,
   .sidebar-primary,
   .sidebar-secondary,
-  .sidebar-sidebar-content .content,
-  .sidebar-sidebar-content .content-sidebar-wrap,
   .site-header .widget-area,
   .title-area {
     width: 100%; }
